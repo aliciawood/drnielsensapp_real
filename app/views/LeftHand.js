@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text, Image, TouchableOpacity, Alert } from 'react-native';
 import { Header } from '../sections/Header.js';
+import { OrganMenu } from '../sections/OrganMenu.js';
 
 
 export class LeftHand extends React.Component {
@@ -8,9 +9,15 @@ export class LeftHand extends React.Component {
 		header: null
     };
 
+    organPressed=(organ) => {
+        let levels = this.props.navigation.state.params.levels;
+        this.props.navigation.navigate('OneOrganRT',{levels:levels.concat([{title: organ, route: 'LeftHandRT'}]), organ:organ});
+    }
+
     render(){
         const { navigate } = this.props.navigation;
         const levels = this.props.navigation.state.params.levels;
+        const organs = ['Kidney','Liver','Heart','Bladder','Gall Bladder','Small Intestine','GV CV'];
         return (
             <View style={styles.container}>
 				<Header 
@@ -18,16 +25,13 @@ export class LeftHand extends React.Component {
 					message='Logout'
 					levels={levels}
 				/>
-                <View style={{flex:1}}/>
                 <View style={styles.imagesStyle}>
-                    <TouchableOpacity style={styles.buttons} onPress={this.leftHandPressed}>
-                        <Image
-                            style={styles.image}
-                            source={ require('../sections/img/leftHand.jpg')}
-                        />
-                    </TouchableOpacity>
+                    <Image
+                        style={styles.image}
+                        source={ require('../sections/img/leftHand.jpg')}
+                    />
                 </View>
-                <View style={{flex:1}}/>
+                <OrganMenu organs={organs} organPressed={this.organPressed} />
             </View>
         );
     }
@@ -41,7 +45,7 @@ const styles = StyleSheet.create({
     imagesStyle: {
         width: undefined,
         height: undefined,
-        flex: 12,
+        flex: 10,
         flexDirection: 'row'
     },
     image: {
@@ -49,7 +53,4 @@ const styles = StyleSheet.create({
         height: undefined,
         flex: 1,
     },
-    buttons: {
-        flex: 1,
-    }
 });

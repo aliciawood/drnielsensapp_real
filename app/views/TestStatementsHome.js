@@ -21,7 +21,7 @@ export class TestStatementsHome extends React.Component {
 
     sendMessage=() => {
         let wholeTestStatement = this.state.firstPartOfTestStatement.substr(0, this.state.firstPartOfTestStatement.length-3) + ' ' + this.state.secondPartOfTestStatement.charAt(0).toLowerCase() + this.state.secondPartOfTestStatement.slice(1);
-        this.props.navigation.navigate('BothHandsRT',{levels: [wholeTestStatement]});
+        this.props.navigation.navigate('BothHandsRT',{levels: [{title: wholeTestStatement, route: 'TestStatementsRT'}]});
     }
 
     render(){

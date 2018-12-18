@@ -4,6 +4,8 @@ import { TestStatementsHome } from './app/views/TestStatementsHome.js';
 import { BothHands } from './app/views/BothHands.js';
 import { LeftHand } from './app/views/LeftHand.js';
 import { RightHand } from './app/views/RightHand.js';
+import { OneOrgan } from './app/views/OneOrgan.js';
+import { OneEmotion } from './app/views/OneEmotion.js';
 import { StackNavigator } from 'react-navigation';
 
 const MyRoutes = StackNavigator({
@@ -21,6 +23,12 @@ const MyRoutes = StackNavigator({
 	},
 	RightHandRT:{
 		screen: RightHand
+	},
+	OneOrganRT:{
+		screen: OneOrgan
+	},
+	OneEmotionRT:{
+		screen: OneEmotion
 	}
 },
 	{

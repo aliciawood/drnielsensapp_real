@@ -1,0 +1,15 @@
+{
+    "Kidney":"blue",
+    "Liver":"green",
+    "Heart":"red",
+    "Bladder":"blue",
+    "Gall Bladder":"green",
+    "Small Intestine":"red",
+    "GV CV":"purple",
+    "Adrenal Thyroid":"red",
+    "Stomach":"yellow",
+    "Large Intestine":"white",
+    "Sex Organs":"red",
+    "Spleen Pancreas":"yellow",
+    "Lungs":"white"
+}

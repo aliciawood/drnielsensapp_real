@@ -34,8 +34,10 @@ export class Header extends React.Component {
                 { !this.state.isCollapsed ?   
                     <View style={{flex:1, flexDirection: 'column'}}>
                         {levels.map((item, index) =>
-                            <Text key={index} style={styles.subSectionText}>
-                                { item }
+                            <Text 
+                                key={index} 
+                                style={styles.subSectionText}>
+                                { item.title}
                             </Text>
                         )}
                         <Text style={styles.headText} onPress={this.toggleCollapse}> 
