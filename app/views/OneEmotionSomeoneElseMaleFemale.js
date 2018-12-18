@@ -45,10 +45,10 @@ export class OneEmotionSomeoneElseMaleFemale extends React.Component {
 				/>
                 <View style={styles.whose}>
                     <TouchableOpacity style={styles.buttonStyles} onPress={() => this.malePressed()}>
-                        <Text styles={styles.buttonText}> Male </Text>
+                        <Text style={styles.buttonText}> Male </Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.buttonStyles} onPress={() => this.femalePressed()}>
-                        <Text styles={styles.buttonText}> Female </Text>
+                        <Text style={styles.buttonText}> Female </Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -67,11 +67,10 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        borderColor: '#ffffff',
+        borderColor: 'grey',
         borderBottomWidth: 1
     },
     buttonText: {
-        color: '#ffffff',
         fontSize: 25
     }
 });

@@ -23,14 +23,14 @@ export class OneEmotionWhy extends React.Component {
 				/>
                 <View style={styles.whose}>
                     <TouchableOpacity style={styles.buttonStyles}>
-                        <Text styles={styles.buttonText}> WHY?? </Text>
-                        <Text styles={styles.buttonText}> MR BIG FAT PET </Text>
+                        <Text style={styles.buttonText}> WHY?? </Text>
+                        {/* <Text style={styles.buttonText}> MR BIG FAT PET </Text> */}
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.buttonStyles}>
-                        <Text styles={styles.buttonText}> Retest Point </Text>
+                        <Text style={styles.buttonText}> Retest Point </Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.buttonStyles} onPress={() => this.emotionCleared()}>
-                        <Text styles={styles.buttonText}> Emotion Cleared </Text>
+                        <Text style={styles.buttonText}> Emotion Cleared </Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -49,11 +49,10 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        borderColor: '#ffffff',
+        borderColor: 'grey',
         borderBottomWidth: 1
     },
     buttonText: {
-        color: '#ffffff',
         fontSize: 25
     }
 });

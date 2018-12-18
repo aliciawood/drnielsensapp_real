@@ -11,7 +11,7 @@ export class TestStatementsHome extends React.Component {
         super(props);
         this.state = {
             firstPartOfTestStatement: "I am willing to...",
-            secondPartOfTestStatement: 'Type the rest of the Test Statement',
+            secondPartOfTestStatement: '',
         };
     }
 
@@ -36,7 +36,6 @@ export class TestStatementsHome extends React.Component {
 					message='Logout'
 					levels={levels}
 				/>
-				<Text style={styles.heading}> Enter the Test Statement you would like to use: </Text>
                 <Picker
                     style={styles.picker}
                     selectedValue={this.state.firstPartOfTestStatement}
@@ -50,6 +49,7 @@ export class TestStatementsHome extends React.Component {
                     style={styles.inputs}
                     onChangeText={(text) => this.setState({secondPartOfTestStatement:text})}
                     value={this.state.secondPartOfTestStatement}
+                    placeholder="Complete the Test Statement"
                     clearButtonMode="always"
                 />
                 <View style={styles.wrapText}>
@@ -69,15 +69,15 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        paddingBottom: '30%'
-    },
-    heading: {
-        fontSize: 16,
-        flex: 1,
-        paddingTop: 10
+        paddingBottom: '30%',
+        backgroundColor: 'white'
     },
     wrapText: {
-        flexDirection: 'row'
+        borderColor: 'grey',
+        borderTopWidth: 1,
+        flexDirection: 'row',
+        paddingTop: 10,
+        textAlign: 'left'
     },
     testStatement: {
         fontSize: 20,
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
         flexWrap: 'wrap'
     },
     picker: {
-        flex: 3,
+        flex: 4,
         paddingBottom: 70,
         width: '80%',
     },

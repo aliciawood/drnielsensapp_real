@@ -9,33 +9,37 @@ export class OrganMenu extends React.Component {
 
     render(){
         let organs = this.props.organs;
+        let organsToColors = require('../sections/config/organsToColors.json');
         return (
             <View style={styles.organs}>
                 <View style={styles.organRow}>
-                    <TouchableOpacity style={styles.buttonStyles} onPress={() => this.organPressed(organs[0])}>
-                        <Text style={styles.buttonText}>{organs[0].toUpperCase()}</Text>
+                    <TouchableOpacity style={[styles.buttonStyles,{backgroundColor:organsToColors[organs[0]]}]} onPress={() => this.organPressed(organs[0])}>
+                        <Text style={styles.buttonText}>{organs[0]}</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonStyles} onPress={() => this.organPressed(organs[1])}>
-                        <Text style={styles.buttonText}>{organs[1].toUpperCase()}</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonStyles} onPress={() => this.organPressed(organs[2])}>
-                        <Text style={styles.buttonText}>{organs[2].toUpperCase()}</Text>
+                    <TouchableOpacity style={[styles.buttonStyles,{backgroundColor:organsToColors[organs[3]]}]} onPress={() => this.organPressed(organs[3])}>
+                        <Text style={styles.buttonText}>{organs[3]}</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.organRow}>
-                    <TouchableOpacity style={styles.buttonStyles} onPress={() => this.organPressed(organs[3])}>
-                        <Text style={styles.buttonText}>{organs[3].toUpperCase()}</Text>
+                    <TouchableOpacity style={[styles.buttonStyles,{backgroundColor:organsToColors[organs[1]]}]} onPress={() => this.organPressed(organs[1])}>
+                        <Text style={styles.buttonText}>{organs[1]}</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonStyles} onPress={() => this.organPressed(organs[4])}>
-                        <Text style={styles.buttonText}>{organs[4].toUpperCase()}</Text>
+                    <TouchableOpacity style={[styles.buttonStyles,{backgroundColor:organsToColors[organs[4]]}]}onPress={() => this.organPressed(organs[4])}>
+                        <Text style={styles.buttonText}>{organs[4]}</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonStyles} onPress={() => this.organPressed(organs[5])}>
-                        <Text style={styles.buttonText}>{organs[5].toUpperCase()}</Text>
+                </View>
+                
+                <View style={styles.organRow}>
+                    <TouchableOpacity style={[styles.buttonStyles,{backgroundColor:organsToColors[organs[2]]}]} onPress={() => this.organPressed(organs[2])}>
+                        <Text style={styles.buttonText}>{organs[2]}</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={[styles.buttonStyles,{backgroundColor:organsToColors[organs[5]]}]} onPress={() => this.organPressed(organs[5])}>
+                        <Text style={styles.buttonText}>{organs[5]}</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.organRow}>
-                    <TouchableOpacity style={styles.buttonStyle} onPress={() => this.organPressed(organs[6])}>
-                        <Text style={styles.buttonText}>{organs[6].toUpperCase()}</Text>
+                    <TouchableOpacity style={[styles.buttonStyle,{backgroundColor:organsToColors[organs[6]]}]} onPress={() => this.organPressed(organs[6])}>
+                        <Text style={styles.buttonText}>{organs[6]}</Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -52,33 +56,27 @@ const styles = StyleSheet.create({
         flex: 1, 
         flexDirection: 'row',
         alignItems: 'center',
-        borderColor: '#ffffff',
+        borderColor: 'grey',
         borderBottomWidth: 1,
         backgroundColor: 'lightgrey',
     },
-    organText: {
-        flex: 1,
-        fontSize: 14,
-        textAlign: 'center',
-        
-    },
     buttonStyles: {
-        width: '33%',
-        height: '50%',
+        width: '50%',
+        height: '100%',
         justifyContent: 'center',
         alignItems: 'center',
-        borderColor: '#ffffff',
-        borderLeftWidth: 1
+        borderColor: 'grey',
+        borderLeftWidth: 1,
     },
     buttonStyle: {
         width: '100%',
-        height: '50%',
+        height: '100%',
         justifyContent: 'center',
         alignItems: 'center',
-        borderColor: '#ffffff',
-        borderLeftWidth: 1
+        borderColor: 'grey',
+        borderLeftWidth: 1,
     },
     buttonText: {
-        fontSize: 14
+        fontSize: 18
     }
 });

@@ -46,10 +46,10 @@ export class OneEmotionWhen extends React.Component {
 				/>
                 <View style={styles.whose}>
                     <TouchableOpacity style={styles.buttonStyles} onPress={() => this.presentPressed()}>
-                        <Text styles={styles.buttonText}> Present </Text>
+                        <Text style={styles.buttonText}> Present </Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.buttonStyles} onPress={() => this.pastPressed()}>
-                        <Text styles={styles.buttonText}> Past </Text>
+                        <Text style={styles.buttonText}> Past </Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -68,11 +68,10 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        borderColor: '#ffffff',
+        borderColor: 'grey',
         borderBottomWidth: 1
     },
     buttonText: {
-        color: '#ffffff',
         fontSize: 25
     }
 });

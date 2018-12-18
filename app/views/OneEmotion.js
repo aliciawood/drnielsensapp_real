@@ -44,10 +44,10 @@ export class OneEmotion extends React.Component {
 				/>
                 <View style={styles.whose}>
                     <TouchableOpacity style={styles.buttonStyles} onPress={() => this.yourEmotionPressed()}>
-                        <Text styles={styles.buttonText}> Your Emotion </Text>
+                        <Text style={styles.buttonText}> Your Emotion </Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.buttonStyles} onPress={() => this.someoneElsesEmotionPressed()}>
-                        <Text styles={styles.buttonText}> Someone Else's Emotion </Text>
+                        <Text style={styles.buttonText}> Someone Else's Emotion </Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -66,11 +66,11 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        borderColor: '#ffffff',
+        borderColor: 'grey',
         borderBottomWidth: 1
     },
     buttonText: {
-        color: '#ffffff',
+        // color: '#ffffff',
         fontSize: 25
     }
 });

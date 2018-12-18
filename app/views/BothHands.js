@@ -48,7 +48,8 @@ export class BothHands extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-		flex: 1
+        flex: 1,
+        backgroundColor: 'white'
     },
     imagesStyle: {
         width: undefined,
@@ -63,7 +64,7 @@ const styles = StyleSheet.create({
     },
     buttons: {
         flex: 1,
-        borderWidth: 0.5,
+        borderWidth: .7,
         borderColor: '#d6d7da'
     }
 });

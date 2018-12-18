@@ -76,27 +76,27 @@ const styles = StyleSheet.create({
     },
     headText: {
         textAlign: 'center',
-        color: '#ffffff',
+        color: 'black',
         fontSize: 20,
         flex: 1,
     },
     subSectionText: {
         textAlign: 'center',
-        color: '#ffffff',
+        color: 'black',
         fontSize: 15,
         flex: 1,
     },
     headStyle: {
         paddingTop: 30,
         paddingRight: 10,
-        backgroundColor: '#003366',
+        backgroundColor: '#1e90ff',
         flex: 1,
         flexDirection: 'row',
         borderBottomWidth: 2,
-        borderColor: '#000000'
+        borderColor: 'grey'
     },
     buttonStyles: {
-        backgroundColor: 'lightgrey',
+        backgroundColor: '#1e90ff',
         height: '20%',
         justifyContent: 'center',
         alignItems: 'center'

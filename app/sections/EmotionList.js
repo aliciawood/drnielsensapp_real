@@ -14,7 +14,7 @@ export class EmotionList extends React.Component {
             <View style={[styles.container,{backgroundColor: color}]}>
                 { emotions.map((emotion, index)=> 
                     <TouchableOpacity key={index} style={styles.buttonStyles} onPress={() => this.emotionPressed(emotion)}>
-                        <Text key={index} styles={styles.buttonText}> {emotion} </Text>
+                        <Text key={index} style={styles.buttonText}> {emotion} </Text>
                     </TouchableOpacity>
                 )}
             </View>
@@ -32,11 +32,10 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        borderColor: '#ffffff',
-        borderBottomWidth: 1
+        borderColor: 'grey',
+        borderBottomWidth: .5
     },
     buttonText: {
-        color: '#ffffff',
         fontSize: 18
     }
 });

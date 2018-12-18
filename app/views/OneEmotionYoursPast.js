@@ -46,7 +46,7 @@ export class OneEmotionYoursPast extends React.Component {
                 <View style={styles.whose}>
                     {ranges.map((range,index)=>
                          <TouchableOpacity key={index} style={styles.buttonStyles} onPress={() => this.rangePressed(range)}>
-                            <Text key={index} styles={styles.buttonText}> {range} </Text>
+                            <Text key={index} style={styles.buttonText}> {range} </Text>
                         </TouchableOpacity>
                     )}
                 </View>
@@ -66,11 +66,10 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        borderColor: '#ffffff',
+        borderColor: 'grey',
         borderBottomWidth: 1
     },
     buttonText: {
-        color: '#ffffff',
         fontSize: 25
     }
 });
