@@ -18,14 +18,16 @@ export class LeftHand extends React.Component {
 					message='Logout'
 					levels={levels}
 				/>
+                <View style={{flex:1}}/>
                 <View style={styles.imagesStyle}>
-                    <TouchableOpacity style={styles.buttons} onPress={this.rightHandPressed}>
+                    <TouchableOpacity style={styles.buttons} onPress={this.leftHandPressed}>
                         <Image
                             style={styles.image}
                             source={ require('../sections/img/leftHand.jpg')}
                         />
                     </TouchableOpacity>
                 </View>
+                <View style={{flex:1}}/>
             </View>
         );
     }

@@ -18,9 +18,14 @@ export class RightHand extends React.Component {
 					message='Logout'
 					levels={levels}
 				/>
-                <View style={{flex:3}}/>
-                <View style={{flex:3}}/>
-                <View style={{flex:3}}/>
+                <View style={styles.imagesStyle}>
+                    <TouchableOpacity style={styles.buttons} onPress={this.rightHandPressed}>
+                        <Image
+                            style={styles.image}
+                            source={ require('../sections/img/rightHand.jpg')}
+                        />
+                    </TouchableOpacity>
+                </View>
             </View>
         );
     }
@@ -31,4 +36,18 @@ const styles = StyleSheet.create({
     container: {
 		flex: 1
     },
+    imagesStyle: {
+        width: undefined,
+        height: undefined,
+        flex: 12,
+        flexDirection: 'row'
+    },
+    image: {
+        width: undefined,
+        height: undefined,
+        flex: 1,
+    },
+    buttons: {
+        flex: 1,
+    }
 });

@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     subSectionText: {
         textAlign: 'center',
         color: '#ffffff',
-        fontSize: 12,
+        fontSize: 15,
         flex: 1,
     },
     headStyleExpanded: {
