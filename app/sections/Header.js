@@ -24,7 +24,6 @@ export class Header extends React.Component {
     render() {
         let display = this.state.isLoggedIn ? 'Sample User' : this.props.message;
         let levels = this.props.levels;
-        console.log("levels: ",levels);
         return(
             <View style={this.state.isCollapsed ? styles.headStyle : styles.headStyleExpanded}>
                 { this.state.isCollapsed && 
