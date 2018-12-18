@@ -16,7 +16,7 @@ export class OneEmotionYoursPast extends React.Component {
             this.props.navigation.navigate('OneEmotionYoursPastRT',
             {
                 title: title,
-                levels:[{title: title, route: 'OneEmotionsYours'}].concat(levels), 
+                levels:levels, 
                 ranges:ranges
             }
         );

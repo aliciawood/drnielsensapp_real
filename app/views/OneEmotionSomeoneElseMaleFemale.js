@@ -2,32 +2,33 @@ import React from 'react';
 import { StyleSheet, View, Text, Image, TouchableOpacity, Alert } from 'react-native';
 import { Header } from '../sections/Header.js';
 
-export class OneEmotionYours extends React.Component {
+export class OneEmotionSomeoneElseMaleFemale extends React.Component {
     static navigationOptions = {
 		header: null
     };
 
-    presentPressed=() => {
+    femalePressed=() => {
+        let whose = this.props.navigation.state.params.whose;
         let emotion = this.props.navigation.state.params.emotion;
         let levels = this.props.navigation.state.params.levels;
-        this.props.navigation.navigate('OneEmotionWhyRT',
+        this.props.navigation.navigate('OneEmotionWhenRT',
             {
-                levels:[{title: 'Your Present ' + emotion, route: 'OneEmotionsYours'}].concat(levels), 
+                whose: 'Female ' + whose,
+                emotion: emotion,
+                levels:[{title: 'Female ' + whose + emotion , route: 'OneEmotionSomeoneElseRT'}].concat(levels), 
             }
         );
     }
 
-    pastPressed=() => {
+    malePressed=() => {
+        let whose = this.props.navigation.state.params.whose;
         let emotion = this.props.navigation.state.params.emotion;
         let levels = this.props.navigation.state.params.levels;
-        const allRanges = require('../sections/config/initialRangeToOtherRanges.json');
-        const ranges = allRanges["starting"];
-        console.log("RANGES: ",ranges);
-        this.props.navigation.navigate('OneEmotionYoursPastRT',
+        this.props.navigation.navigate('OneEmotionWhenRT',
             {
-                title: 'Your Past ' + emotion,
-                levels:[{title: 'Your Past ' + emotion, route: 'OneEmotionsYours'}].concat(levels), 
-                ranges:ranges
+                whose: 'Male ' + whose,
+                emotion: emotion,
+                levels:[{title: 'Male ' + whose + emotion, route: 'OneEmotionSomeoneElseRT'}].concat(levels), 
             }
         );
     }
@@ -43,11 +44,11 @@ export class OneEmotionYours extends React.Component {
 					levels={levels}
 				/>
                 <View style={styles.whose}>
-                    <TouchableOpacity style={styles.buttonStyles} onPress={() => this.presentPressed()}>
-                        <Text styles={styles.buttonText}> Present </Text>
+                    <TouchableOpacity style={styles.buttonStyles} onPress={() => this.malePressed()}>
+                        <Text styles={styles.buttonText}> Male </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonStyles} onPress={() => this.pastPressed()}>
-                        <Text styles={styles.buttonText}> Past </Text>
+                    <TouchableOpacity style={styles.buttonStyles} onPress={() => this.femalePressed()}>
+                        <Text styles={styles.buttonText}> Female </Text>
                     </TouchableOpacity>
                 </View>
             </View>

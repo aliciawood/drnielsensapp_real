@@ -8,11 +8,27 @@ export class OneEmotionSomeoneElses extends React.Component {
     };
 
     familyPressed=() => {
-
+        let emotion = this.props.navigation.state.params.emotion;
+        let levels = this.props.navigation.state.params.levels;
+        this.props.navigation.navigate('OneEmotionSomeoneElseMaleFemaleRT',
+            {
+                levels:[{title: 'Family Member\'s ' + emotion, route: 'OneEmotionSomeoneElseRT'}].concat(levels), 
+                whose: 'Non-Family Member\'s ',
+                emotion: emotion
+            }
+        );
     }
 
     nonFamilyPressed=() => {
-        
+        let emotion = this.props.navigation.state.params.emotion;
+        let levels = this.props.navigation.state.params.levels;
+        this.props.navigation.navigate('OneEmotionSomeoneElseMaleFemaleRT',
+            {
+                levels:[{title: 'Non-Family Member\'s ' + emotion, route: 'OneEmotionSomeoneElseRT'}].concat(levels), 
+                whose: 'Non-Family Member\'s ',
+                emotion: emotion
+            }
+        );
     }
 
     render(){

@@ -6,9 +6,10 @@ import { LeftHand } from './app/views/LeftHand.js';
 import { RightHand } from './app/views/RightHand.js';
 import { OneOrgan } from './app/views/OneOrgan.js';
 import { OneEmotion } from './app/views/OneEmotion.js';
-import { OneEmotionYours } from './app/views/OneEmotionYours.js';
+import { OneEmotionWhen } from './app/views/OneEmotionWhen.js';
 import { OneEmotionYoursPast } from './app/views/OneEmotionYoursPast.js';
 import { OneEmotionSomeoneElses} from './app/views/OneEmotionSomeoneElses.js';
+import { OneEmotionSomeoneElseMaleFemale} from './app/views/OneEmotionSomeoneElseMaleFemale.js';
 import { OneEmotionWhy } from './app/views/OneEmotionWhy.js';
 import { StackNavigator } from 'react-navigation';
 
@@ -34,8 +35,8 @@ const MyRoutes = StackNavigator({
 	OneEmotionRT:{
 		screen: OneEmotion
 	},
-	OneEmotionYoursRT:{
-		screen: OneEmotionYours
+	OneEmotionWhenRT:{
+		screen: OneEmotionWhen
 	},
 	OneEmotionYoursPastRT:{
 		screen: OneEmotionYoursPast
@@ -45,6 +46,9 @@ const MyRoutes = StackNavigator({
 	},
 	OneEmotionWhyRT:{
 		screen: OneEmotionWhy
+	},
+	OneEmotionSomeoneElseMaleFemaleRT:{
+		screen: OneEmotionSomeoneElseMaleFemale
 	},
 },
 	{
