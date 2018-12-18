@@ -12,7 +12,7 @@ export class OneOrgan extends React.Component {
         let levels = this.props.navigation.state.params.levels;
         this.props.navigation.navigate('OneEmotionRT',
             {
-                levels:levels.concat([{title: emotion, route: 'OneOrganRT'}]), 
+                levels:[{title: emotion, route: 'OneOrganRT'}].concat(levels), 
                 emotion:emotion
             }
         );

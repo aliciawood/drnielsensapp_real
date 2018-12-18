@@ -11,7 +11,7 @@ export class RightHand extends React.Component {
 
     organPressed=(organ) => {
         let levels = this.props.navigation.state.params.levels;
-        this.props.navigation.navigate('OneOrganRT',{levels:levels.concat([{title: organ, route: 'RightHandRT'}]), organ:organ});
+        this.props.navigation.navigate('OneOrganRT',{levels:[{title: organ, route: 'RightHandRT'}].concat(levels), organ:organ});
     }
 
     render(){

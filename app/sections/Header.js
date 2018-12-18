@@ -21,41 +21,46 @@ export class Header extends React.Component {
             });
         }
     }
+    shouldDisplayLogin = () => {
+        return this.props.levels.length == 0;
+    }
     render() {
         let display = this.state.isLoggedIn ? 'Sample User' : this.props.message;
         let levels = this.props.levels;
+        let highLevelText = this.props.levels.length == 0 ? 'ESR' : this.props.levels[0].title;
         return(
-            <View style={this.state.isCollapsed ? styles.headStyle : styles.headStyleExpanded}>
-                { this.state.isCollapsed && 
+            <View style={this.state.isCollapsed ? styles.headStyle : [styles.headStyle,{flex:levels.length + 1}]}>
+                {/* { this.state.isCollapsed && 
                     <Text 
                         style={styles.headText} 
                     />
-                }
+                } */}
                 { !this.state.isCollapsed ?   
                     <View style={{flex:1, flexDirection: 'column'}}>
                         {levels.map((item, index) =>
                             <Text 
                                 key={index} 
+                                onPress={this.toggleCollapse}
                                 style={styles.subSectionText}>
                                 { item.title}
                             </Text>
                         )}
-                        <Text style={styles.headText} onPress={this.toggleCollapse}> 
+                        {/* <Text style={styles.headText} > 
                             ESR
-                        </Text>
+                        </Text> */}
                     </View>
                 :
                     <Text 
                         style={styles.headText}
-                        onPress={this.toggleCollapse}> ESR 
+                        onPress={this.toggleCollapse}> {highLevelText} 
                     </Text>
                 }
-                { this.state.isCollapsed &&
+                {/* { this.shouldDisplayLogin &&
                     <Text 
                         style={styles.loginButtonText}
                         onPress={this.toggleUser}> {display} 
                     </Text>
-                }
+                } */}
             </View>
         );
     }
@@ -80,15 +85,6 @@ const styles = StyleSheet.create({
         color: '#ffffff',
         fontSize: 15,
         flex: 1,
-    },
-    headStyleExpanded: {
-        paddingTop: 30,
-        paddingRight: 10,
-        backgroundColor: '#003366',
-        flex: 4,
-        flexDirection: 'row',
-        borderBottomWidth: 2,
-        borderColor: '#000000'
     },
     headStyle: {
         paddingTop: 30,

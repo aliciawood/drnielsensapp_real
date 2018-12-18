@@ -9,11 +9,11 @@ export class BothHands extends React.Component {
     };
     leftHandPressed=() => {
         let levels = this.props.navigation.state.params.levels;
-        this.props.navigation.navigate('LeftHandRT',{levels: levels.concat([{title: 'Left Hand', route: 'BothHandsRT'}])});
+        this.props.navigation.navigate('LeftHandRT',{levels: [{title: 'Left Hand', route: 'BothHandsRT'}].concat(levels)});
     }
     rightHandPressed=() => {
         let levels = this.props.navigation.state.params.levels;
-        this.props.navigation.navigate('RightHandRT',{levels: levels.concat([{title: 'Right Hand', route: 'BothHandsRT'}])});
+        this.props.navigation.navigate('RightHandRT',{levels: [{title: 'Right Hand', route: 'BothHandsRT'}].concat(levels)});
     }
     render(){
         const { navigate } = this.props.navigation;
